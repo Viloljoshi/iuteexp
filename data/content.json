@@ -1,0 +1,220 @@
+{
+  "sources": [
+    {
+      "id": 1,
+      "label": "Iute Group, Annual Report 2025",
+      "url": "https://iute.com/wp-content/uploads/2026/03/Iute-Annual-Report-2025.pdf"
+    },
+    {
+      "id": 2,
+      "label": "Iute Group, 6M 2026 unaudited results",
+      "url": "https://iute.com/wp-content/uploads/2026/08/260827_Iute_Report_6M2026.pdf"
+    },
+    {
+      "id": 3,
+      "label": "Iute Affinity, public site",
+      "url": "https://affinity.iute.com/"
+    },
+    {
+      "id": 4,
+      "label": "Iute, Insurance Product Lead role description",
+      "url": "https://careers.iute.com/jobs/8260557-insurance-product-lead"
+    },
+    {
+      "id": 5,
+      "label": "Iute careers, customer promise and values",
+      "url": "https://careers.iute.com/"
+    }
+  ],
+  "facts": [
+    {
+      "text": "Insurance intermediation represented 5% of Group revenue in 2025; Iute also reported fully digital MTPL in Albania and preparation of a subscription proposition combining travel, life and roadside assistance.",
+      "source": 1
+    },
+    {
+      "text": "In 6M 2026, insurance brokerage revenue grew 59.6% year on year to 5.7% of total revenue; standalone motor and health products were targeted for later in 2026.",
+      "source": 2
+    },
+    {
+      "text": "Iute Affinity publicly describes full-lifecycle administration, claims handling, partner coordination and multi-market standardisation as part of its role.",
+      "source": 3
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "motor",
+      "name": "Standalone motor",
+      "note": "Illustrative worked example — not a roadmap recommendation",
+      "scores": ["High", "High", "Unknown", "Medium", "Medium", "High"],
+      "interview": {
+        "Customer": ["Vehicle owner or driver", "Avoid legal, financial and mobility disruption", "Current alternative and renewal behaviour to validate"],
+        "Product": ["Core cover with an optional assistance layer", "Limits, exclusions and proof of insurance must be legible", "Trust bridge between digital policy and physical expectations"],
+        "Business": ["Premium, commission and renewal are internal inputs", "Model contribution after service, payment and exception costs", "Test incremental adoption, not exposed-customer conversion alone"],
+        "Partner": ["Carrier owns underwriting according to contract", "Agree quote, bind, claims, data and escalation obligations", "Assess portfolio sustainability, not only launch price"],
+        "Operations": ["Policy changes, cancellation and refunds need named owners", "Payment and issuance states must reconcile", "A claim cannot expose the customer to partner complexity"],
+        "Scale": ["Reuse orchestration, objects and event taxonomy", "Localise carrier, wording, pricing, disclosures and claims", "Extract shared capability only after pilot evidence"]
+      }
+    },
+    {
+      "id": "health",
+      "name": "Health + assistance",
+      "note": "Illustrative comparison — requires deeper customer and privacy evidence",
+      "scores": ["High", "Medium", "Unknown", "Unknown", "High", "Medium"],
+      "interview": {
+        "Customer": ["Households seeking access and cost certainty", "Need intensity may be high but benefit comprehension varies", "Interview buyers, abandoners, users and cancellers"],
+        "Product": ["Protection and service bundle must be evaluated separately", "Waiting periods, networks and exclusions shape value", "Validate whether annual or subscription framing is clearer"],
+        "Business": ["Service utilisation changes unit economics", "Renewal value requires sustained perceived usefulness", "Acquisition outside existing relationships may change the case"],
+        "Partner": ["Carrier, assistance and medical networks may differ", "Data boundaries and service SLAs are product constraints", "Assess complaint and escalation handoffs"],
+        "Operations": ["Sensitive data requires purpose and access discipline", "Service routing should feel like one front door", "Human support for consequential ambiguity"],
+        "Scale": ["Coverage and provider networks vary materially", "Shared policy wallet and service intake may still repeat", "Local privacy and health regulation require validation"]
+      }
+    },
+    {
+      "id": "travel",
+      "name": "Travel protection",
+      "note": "Illustrative comparison — test event observability and frequency",
+      "scores": ["Medium", "Medium", "Unknown", "High", "Medium", "High"],
+      "interview": {
+        "Customer": ["Traveller facing episodic financial and service risk", "Purchase moment can be observable or explicitly declared", "Validate frequency, trust and willingness to pay"],
+        "Product": ["Medical, baggage and assistance layers", "Territory, trip duration and exclusions must be clear", "Service access may matter more than feature count"],
+        "Business": ["Episodic purchase and annual cover have different economics", "Model paid acquisition only if existing reach is insufficient", "Renewal and cross-product value need evidence"],
+        "Partner": ["International assistance reach is central", "Real-time policy and emergency-service availability matter", "Assess claims data and incident escalation"],
+        "Operations": ["Time-zone and language coverage", "Offline access to policy and help", "Carrier outage cannot block emergency intake"],
+        "Scale": ["Common journey with market-specific eligibility and wording", "Assistance-network reach may bound scale", "Use shared events and reconciliation controls"]
+      }
+    }
+  ],
+  "wireframes": [
+    {
+      "id": "entry",
+      "step": "01",
+      "title": "Contextual entry",
+      "screenTitle": "Vehicle protection",
+      "screenCopy": "Your current cover may be due for renewal soon.",
+      "screenMeta": "Check the details before deciding",
+      "action": "See protection",
+      "secondary": "Why am I seeing this?",
+      "customerJob": "Is this relevant to me, and why now?",
+      "decision": "Use a contextual entry only when a legitimate signal exists; otherwise use explicit discovery.",
+      "data": "Declared vehicle context or an approved lifecycle signal. Never manufacture relevance.",
+      "metric": "Incremental qualified product-detail engagement, with core-flow and opt-out guardrails.",
+      "control": "Show the reason for the offer and provide an easy way to dismiss it."
+    },
+    {
+      "id": "profile",
+      "step": "02",
+      "title": "Eligibility + profile",
+      "screenTitle": "A few details",
+      "screenCopy": "We know your name and date of birth. Please confirm what can be reused.",
+      "screenMeta": "Registration • Vehicle type • Start date",
+      "action": "Continue",
+      "secondary": "Why these details?",
+      "customerJob": "Get a quote without answering the same questions twice.",
+      "decision": "Prefill only verified, permitted fields and ask for confirmation where accuracy matters.",
+      "data": "Known by Iute ≠ permitted for this purpose ≠ required by the carrier.",
+      "metric": "Eligibility-to-completed-input rate and correction rate.",
+      "control": "A clear not-eligible path explains the result and any genuine alternative."
+    },
+    {
+      "id": "quote",
+      "step": "03",
+      "title": "Quote + choice",
+      "screenTitle": "Choose your cover",
+      "screenCopy": "Essential\nRequired third-party cover\n\nPlus\nCover + roadside assistance",
+      "screenMeta": "Price shown after carrier quote",
+      "action": "Compare cover",
+      "secondary": "View full documents",
+      "customerJob": "Understand what changes between options.",
+      "decision": "Two useful choices are preferable to a catalogue of marginal variants.",
+      "data": "Quote ID, expiry, product version, limits, excess and carrier response.",
+      "metric": "Quote returned → informed selection; not card clicks.",
+      "control": "Never hide important limits or reframe contractual meaning."
+    },
+    {
+      "id": "coverage",
+      "step": "04",
+      "title": "Coverage comprehension",
+      "screenTitle": "Before you continue",
+      "screenCopy": "Covered\nThird-party liability\n\nImportant limit\nRoadside assistance has usage limits\n\nNot covered\nEvents outside the policy terms",
+      "screenMeta": "Approved wording remains the source of truth",
+      "action": "I understand",
+      "secondary": "Read policy terms",
+      "customerJob": "Know what I am buying before I pay.",
+      "decision": "Put useful cover, material limits and exclusions in the decision path.",
+      "data": "Approved, versioned product documents and local disclosure rules.",
+      "metric": "Comprehension signal, bind rate and post-sale coverage contacts.",
+      "control": "GenAI may simplify approved content but cannot create contractual meaning."
+    },
+    {
+      "id": "bind",
+      "step": "05",
+      "title": "Confirm + bind",
+      "screenTitle": "Confirm your protection",
+      "screenCopy": "Product • price • billing • start date\n\nReview required information and confirm payment.",
+      "screenMeta": "Consent → payment auth → bind → issue",
+      "action": "Confirm and pay",
+      "secondary": "Back to cover",
+      "customerJob": "Know whether I am insured after I pay.",
+      "decision": "Treat payment and policy issuance as separate, observable states.",
+      "data": "Consent record, idempotency key, payment status, bind status, policy ID.",
+      "metric": "Payment-to-policy issuance success and time to confirmed cover.",
+      "control": "If payment succeeds but bind fails, show pending—not active—then retry safely or refund."
+    },
+    {
+      "id": "policy",
+      "step": "06",
+      "title": "Policy home",
+      "screenTitle": "Policy active",
+      "screenCopy": "Motor protection\n\nCover • documents • payment\nRenewal date • change or cancel",
+      "screenMeta": "Policy ID and verification available",
+      "action": "Get help",
+      "secondary": "Make a claim",
+      "customerJob": "Use and verify my cover after purchase.",
+      "decision": "Optimise for ownership, service and renewal—not only checkout.",
+      "data": "Policy version, documents, payment, changes, renewal and claim status.",
+      "metric": "Self-service completion, contact rate, renewal and claim initiation success.",
+      "control": "Provide printable proof when physical documentation still supports trust."
+    },
+    {
+      "id": "claim",
+      "step": "07",
+      "title": "Claim + service",
+      "screenTitle": "Claim in review",
+      "screenCopy": "Submitted ✓\nEvidence checked ✓\nReview in progress\nDecision pending",
+      "screenMeta": "Next update: a committed service date",
+      "action": "View documents",
+      "secondary": "Contact support",
+      "customerJob": "Know what is happening and what I need to do next.",
+      "decision": "A single front door should hide routing complexity without hiding accountability.",
+      "data": "Policy, claim, evidence, routing owner, SLA and status history.",
+      "metric": "Evidence-complete time, contacts per claim, TAT, reopen and complaints.",
+      "control": "Models can structure intake; coverage and claim decisions remain appropriately controlled."
+    }
+  ],
+  "questions": [
+    {
+      "topic": "Portfolio",
+      "question": "Where is the largest constraint today: product breadth, penetration, renewal, standalone distribution or operating scale?"
+    },
+    {
+      "topic": "Economics",
+      "question": "Which constraint most often stops a promising proposition from scaling: customer price, Iute contribution, service cost or carrier economics?"
+    },
+    {
+      "topic": "Markets",
+      "question": "Which differences between countries have proved structurally important, rather than merely local implementation detail?"
+    },
+    {
+      "topic": "Partners",
+      "question": "Where does Iute want stronger ownership across proposition, administration, servicing and claims—and where is carrier ownership the better choice?"
+    },
+    {
+      "topic": "Operating model",
+      "question": "Where do customer and operational failures concentrate today: quote, issue, payment, servicing, claims, reconciliation or data handoffs?"
+    },
+    {
+      "topic": "Ways of working",
+      "question": "What have the strongest product leads at Iute learned about moving quickly across Group, country, technology and insurance teams?"
+    }
+  ]
+}

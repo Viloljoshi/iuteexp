@@ -1,0 +1,281 @@
+import { Appendix } from "@/components/Appendix";
+import { DecisionIntelligence } from "@/components/DecisionIntelligence";
+import { DistributionFunnel } from "@/components/DistributionFunnel";
+import { EvidenceTag, SourceLink, SourceList } from "@/components/Evidence";
+import { ArrowFlow, DecisionRecord, SectionHeading, ThreeSidedModel } from "@/components/Models";
+import { EvidencePlan, OpportunityExplorer } from "@/components/OpportunityExplorer";
+import { FailureStateExplorer, ServiceBlueprint } from "@/components/ServiceBlueprint";
+import { SiteHeader } from "@/components/SiteHeader";
+import { WireframeGallery } from "@/components/WireframeGallery";
+import content from "@/data/content.json";
+
+const nav = [
+  ["01", "Capability", "capability"],
+  ["02", "Opportunity", "opportunity"],
+  ["03", "Viability", "viability"],
+  ["04", "Proposition", "proposition"],
+  ["05", "Journey", "journey"],
+  ["06", "Operations", "operations"],
+  ["07", "Measure + scale", "measure"],
+  ["08", "Intelligence", "intelligence"],
+  ["A", "Appendix", "appendix"],
+];
+
+const operatingChain = ["Market signal", "Customer need", "Cover design", "Partner model", "Economics", "Distribution", "Digital journey", "Operations", "Readiness", "Launch", "Performance", "Scale / stop"];
+
+export default function DeepDivePage() {
+  return (
+    <>
+      <SiteHeader active="deep-dive" />
+      <div className="deep-shell">
+        <aside className="chapter-nav no-print">
+          <p>Discussion map</p>
+          <nav aria-label="Deep-dive sections">
+            {nav.map(([index, label, id]) => <a href={`#${id}`} key={id}><span>{index}</span>{label}</a>)}
+          </nav>
+          <a className="chapter-brief-link" href="/brief/">Open 2-page brief</a>
+        </aside>
+
+        <main className="deep-main">
+          <section className="deep-hero" id="top">
+            <div className="deep-hero-topline">
+              <div><EvidenceTag kind="HYPOTHESIS" /><span>Outside-in working case · not an internal recommendation</span></div>
+              <span>Vilol Joshi · September 2026</span>
+            </div>
+            <h1>Building a repeatable insurance growth engine</h1>
+            <p className="deep-hero-lede">
+              How should Iute repeatedly turn protection opportunities into viable digital products across markets?
+            </p>
+            <div className="deep-thesis-grid">
+              <p>
+                <span>Working thesis</span>
+                The long-term advantage is not simply another launch. It is a decision and operating system that lowers the cost, risk and uncertainty of every good launch that follows.
+              </p>
+              <p>
+                <span>Evidence discipline</span>
+                Public fact is separated from interpretation. Unknowns are converted into discovery tasks. Internal evidence decides.
+              </p>
+              <p>
+                <span>Technology position</span>
+                Software, data and AI should increase the leverage of product judgment—not substitute for it.
+              </p>
+            </div>
+            <div className="public-evidence-strip">
+              {content.facts.map((fact) => (
+                <article key={fact.text}><div><EvidenceTag kind="FACT" /><SourceLink id={fact.source} compact /></div><p>{fact.text}</p></article>
+              ))}
+            </div>
+          </section>
+
+          <section className="deep-section" id="capability">
+            <SectionHeading index="01" title="What capability are we really building?" prompt="Decision: standardise only what demonstrably repeats; do not start with a platform rewrite." evidence="INFERENCE" />
+            <div className="architecture-compare">
+              <article>
+                <div className="model-label">Product-by-product world</div>
+                {["Product A", "Product B", "Product C"].map((item) => <div className="bespoke-line" key={item}><strong>{item}</strong><span>custom flow</span><i>→</i><span>carrier integration</span><i>→</i><span>custom operations</span></div>)}
+                <p>Fast once. Repeated coupling can make every later launch expensive.</p>
+              </article>
+              <div className="compare-marker"><span>Decision</span><strong>What repeats?</strong></div>
+              <article className="reusable-model">
+                <div className="model-label">Reusable product capability</div>
+                <div className="architecture-stack">
+                  <span>Customer experience</span><i>↓</i><span>Product configuration</span><i>↓</i><strong>Insurance orchestration</strong>
+                  <div><span>Quote</span><span>Policy</span><span>Service</span><span>Claim</span></div>
+                  <i>↓</i><span>Partner adapter layer</span><div><span>Carrier A</span><span>Carrier B</span><span>Provider C</span></div>
+                </div>
+                <p>Extract primitives after proof: quote, policy state, consent, documents, claims intake, events and controls.</p>
+              </article>
+            </div>
+            <div className="commercial-chain">
+              <p><strong>The product is the complete commercial and operating system, not the purchase screen.</strong></p>
+              <ArrowFlow compact items={operatingChain} />
+            </div>
+          </section>
+
+          <section className="deep-section" id="opportunity">
+            <SectionHeading index="02" title="Select a problem worth solving" prompt="Decision: portfolio attractiveness must survive customer, distribution, economics, carrier, operating and scale constraints." />
+            <OpportunityExplorer />
+            <div className="opportunity-formula">
+              <div><span>Decision aid—not a literal financial formula</span><strong>Customer value × commercial potential × distribution advantage × strategic fit × confidence</strong></div>
+              <i>÷</i>
+              <div><span>Friction to validate</span><strong>Partner complexity × operating complexity × regulation × build effort</strong></div>
+            </div>
+            <h3 className="subsection-title">How I would establish customer evidence</h3>
+            <EvidencePlan />
+          </section>
+
+          <section className="deep-section" id="viability">
+            <SectionHeading index="03" title="Make the proposition viable for all three parties" prompt="Decision: separate Iute’s intermediary contribution from the carrier’s underwriting economics—and manage both." />
+            <ThreeSidedModel />
+            <div className="economics-chain-grid">
+              <article>
+                <span>Iute intermediary view</span>
+                <h3>From exposure to contribution</h3>
+                <div className="equation-block">
+                  <p>Eligible × reach × engagement × quote completion × bind</p><strong>= policies</strong>
+                  <p>Policies × premium × effective commission / fees</p><strong>= gross revenue</strong>
+                  <p>Revenue − acquisition − service − payment − TPA / admin − product ops</p><strong>= contribution</strong>
+                  <p>Contribution × persistency / renewal behaviour</p><strong>= longer-term value</strong>
+                </div>
+                <a className="text-link" href="#economics-model">Open the editable sensitivity model in the appendix</a>
+              </article>
+              <article>
+                <span>Carrier portfolio view</span>
+                <h3>Sustainability returns through the partnership</h3>
+                <div className="carrier-signals">
+                  {['Premium adequacy','Claim frequency','Claim severity','Loss ratio','Fraud','Expense','Adverse selection','Portfolio mix'].map((item) => <span key={item}>{item}</span>)}
+                </div>
+                <p><strong>Not owning underwriting risk does not mean ignoring underwriting economics.</strong> Weak portfolio economics return through price, terms, capacity, commission or willingness to scale.</p>
+              </article>
+            </div>
+            <DecisionRecord
+              decision="Select and govern the carrier as part of the product"
+              value="Reliable cover, price and claim service"
+              commercial="Sustainable revenue, renewal and portfolio capacity"
+              complexity="Commercial, technical, data and operating integration"
+              risk="A low launch price can hide weak service or unsustainable portfolio economics"
+              evidence="Carrier scorecard, sandbox proof, SLA, portfolio reporting and references"
+              unknown="Actual appetite, terms, operating performance and negotiation trade-offs"
+              outcome="Select on sustainable value × economics × operations × technical fit × scale"
+            />
+          </section>
+
+          <section className="deep-section" id="proposition">
+            <SectionHeading index="04" title="Shape the proposition around a real customer job" prompt="Decision: use standalone motor as an intelligible example—not a claim about Iute’s internal roadmap." evidence="HYPOTHESIS" />
+            <div className="worked-example-banner"><span>Illustrative application</span><strong>“I need certainty that owning and using my vehicle will not create an avoidable legal, financial or mobility burden.”</strong></div>
+            <div className="proposition-layers">
+              <article><span>01</span><h3>Coverage</h3><p>Core third-party protection, optional assistance, useful limits, material exclusions and clear proof of insurance.</p></article>
+              <article><span>02</span><h3>Value experience</h3><p>Clarity before purchase, visibility in ownership, one front door during an incident and relevance at renewal.</p></article>
+              <article><span>03</span><h3>Commercial design</h3><p>Annual or recurring payment, standalone or contextual, benefit funding, commission and full cost to serve.</p></article>
+              <article><span>04</span><h3>Differentiation</h3><p>Simplicity, trusted context, combined protection + service, reliable claims and an honest price/value balance.</p></article>
+            </div>
+            <div className="moment-model">
+              <div className="moment-question"><span>1</span><strong>Is the need created or revealed by an existing customer moment?</strong><p>Financial · travel · vehicle · family · protection gap · renewal</p></div>
+              <i>→</i><div className="moment-question"><span>2</span><strong>Is there a legitimate signal of that need?</strong><p>Known relationship · declared intent · approved context · explicit request</p></div>
+              <i>→</i><div className="moment-question"><span>3</span><strong>Choose the least intrusive effective distribution mode</strong><p>Embedded · contextual · marketplace · CRM · partner · advisor</p></div>
+            </div>
+            <DistributionFunnel />
+          </section>
+
+          <section className="deep-section" id="journey">
+            <SectionHeading index="05" title="Design decisions, not decorative screens" prompt="Decision: expose the customer job, commercial intent, data dependency, metric and failure control for every step." />
+            <div className="journey-ribbon"><ArrowFlow items={["Need", "Discover", "Quote", "Understand", "Bind", "Policy", "Service", "Claim", "Renew"]} /></div>
+            <WireframeGallery />
+          </section>
+
+          <section className="deep-section" id="operations">
+            <SectionHeading index="06" title="Design what happens behind the screen—and when it breaks" prompt="Decision: each handoff and state transition needs ownership, observability and a truthful customer outcome." />
+            <ServiceBlueprint />
+            <h3 className="subsection-title">The unhappy path is part of the product</h3>
+            <FailureStateExplorer />
+          </section>
+
+          <section className="deep-section" id="measure">
+            <SectionHeading index="07" title="Measure causally. Scale selectively." prompt="Decision: diagnose the economic driver, prove operations, then extract the repeatable mechanism." />
+            <div className="measure-scale-grid">
+              <article className="driver-tree">
+                <div className="model-label">Driver tree</div>
+                <h3>Insurance contribution</h3>
+                <div className="tree-root"><strong>Contribution</strong><div className="tree-branches">
+                  <div><span>Policy volume</span><small>Eligibility · reach · engagement · quote · bind</small></div>
+                  <div><span>Revenue / policy</span><small>Premium · commission · service fees if applicable</small></div>
+                  <div><span>Persistency</span><small>Cancellation · renewal · sustained utility</small></div>
+                  <div><span>Cost</span><small>Acquisition · operations · partner · payment · technology</small></div>
+                </div></div>
+                <div className="causal-levels"><span>System</span><i>→</i><span>Operations</span><i>→</i><span>Customer</span><i>→</i><span>Commercial outcome</span></div>
+              </article>
+              <article className="scale-stack">
+                <div className="model-label">Multi-market model</div>
+                <h3>Standardise mechanisms; localise material difference.</h3>
+                <div><span>Level 1</span><strong>Group standard</strong><p>Product principles · customer treatment · objects · events · audit · integration pattern</p></div>
+                <div><span>Level 2</span><strong>Product configuration</strong><p>Coverage · eligibility · documents · payments · claim requirements · service levels</p></div>
+                <div><span>Level 3</span><strong>Market configuration</strong><p>Carrier · regulation · language · currency · disclosure · local service · complaints · reporting</p></div>
+              </article>
+            </div>
+            <div className="proof-sequence"><span>Pilot</span><i>→</i><span>Product–market proof</span><i>→</i><span>Operational proof</span><i>→</i><span>Economic proof</span><i>→</i><span>Reusable capability</span><i>→</i><span>Next market</span></div>
+          </section>
+
+          <section className="deep-section" id="intelligence">
+            <SectionHeading index="08" title="Intelligence is a product choice, not a default architecture" prompt="Decision: start with the business problem and baseline; use the simplest reliable mechanism that improves the outcome." />
+            <DecisionIntelligence />
+            <DecisionRecord
+              decision="Automate claim-document intake"
+              value="Fewer repeat requests and faster progress visibility"
+              commercial="Lower handling effort and potentially shorter claim cycle time"
+              complexity="Document variation, schema mapping, evaluation, monitoring and reviewer workflow"
+              risk="A plausible but wrong critical field can lead to a consequential downstream action"
+              evidence="Golden data, field-level accuracy, calibration, correction and baseline handling cost"
+              unknown="Actual document mix, error cost, partner authority and production data availability"
+              outcome="Begin offline, then shadow and reviewer assist; automate only bounded fields that earn it"
+            />
+          </section>
+
+          <section className="candidate-section" id="candidate-value">
+            <div className="candidate-heading">
+              <span>Long-term fit</span>
+              <h2>Where I can add value, where I need Iute context, and how the value compounds</h2>
+              <p>Credibility comes from being explicit about both leverage and limits.</p>
+            </div>
+            <div className="iute-principles">
+              <div className="iute-principles-label"><span>Product interpretation of Iute’s customer promise</span><SourceLink id={5} compact /></div>
+              <article><strong>Most convenient</strong><p>Remove repeated questions, hidden partner routing and avoidable service work.</p></article>
+              <article><strong>Fastest</strong><p>Measure time to a trusted outcome—including exceptions—not only screen speed.</p></article>
+              <article><strong>Human touch</strong><p>Use automation to focus people where empathy, context or authority matter.</p></article>
+            </div>
+            <div className="fit-columns">
+              <article className="fit-now">
+                <span>Value I can add now</span>
+                <h3>Turn ambiguity into an operated product</h3>
+                <ul>
+                  <li><strong>Regulated workflows:</strong> translate commercial, compliance and operating constraints into an end-to-end journey.</li>
+                  <li><strong>High-volume decision systems:</strong> 575K+ monthly cases with confidence routing and human review.</li>
+                  <li><strong>Measured automation:</strong> ~45% manual-review reduction and ~25% API turnaround improvement in prior financial workflows.</li>
+                  <li><strong>Engineering partnership:</strong> define state, failure, instrumentation, control and trade-offs without pretending to dictate architecture.</li>
+                </ul>
+              </article>
+              <article className="fit-context">
+                <span>Where I need Iute’s depth</span>
+                <h3>Learn the realities that public sources cannot show</h3>
+                <ul>
+                  <li>Product-level carrier contracts, pricing, commission and portfolio economics.</li>
+                  <li>Country-specific customer behaviour, distribution rules and regulatory practice.</li>
+                  <li>Claims authority, servicing handoffs, operational exceptions and complaint themes.</li>
+                  <li>Which platform capabilities genuinely repeat—and which local differences deserve to remain local.</li>
+                </ul>
+              </article>
+              <article className="fit-compound">
+                <span>How long-term value compounds</span>
+                <h3>Leave the next launch easier than the last</h3>
+                <ul>
+                  <li>Run evidence reviews with country, insurance, finance, claims and technology owners.</li>
+                  <li>Build reusable decision records, product configuration, partner contracts, events and launch controls.</li>
+                  <li>Convert recurring manual exceptions into measured product improvements.</li>
+                  <li>Apply ML or GenAI only where the baseline, data, economics and controls justify the operating burden.</li>
+                </ul>
+              </article>
+            </div>
+            <p className="candidate-boundary">Transferable patterns from regulated financial workflows—not a claim that insurance is identical to KYC or lending, and not a substitute for Iute’s insurance expertise.</p>
+          </section>
+
+          <section className="deep-section appendix-section" id="appendix">
+            <SectionHeading index="A" title="Practitioner appendix" prompt="Depth for challenge and discussion; not a sequence the hiring manager needs to sit through." />
+            <Appendix />
+          </section>
+
+          <section className="discussion-close">
+            <div className="discussion-heading"><EvidenceTag kind="HYPOTHESIS" /><h2>What I would want to understand from the team</h2><p>Questions that would change a product decision—not performative questions at the end of an interview.</p></div>
+            <div className="question-grid">
+              {content.questions.map((item) => <article key={item.topic}><span>{item.topic}</span><p>{item.question}</p></article>)}
+            </div>
+            <blockquote>These are outside-in hypotheses rather than recommendations. I’m looking forward to understanding where they align—or conflict—with what the team is seeing internally.</blockquote>
+          </section>
+
+          <footer className="deep-footer">
+            <SourceList />
+            <p>Prepared from public Iute material only. No access to non-public customer, carrier, financial, regulatory or operating information is claimed.</p>
+          </footer>
+        </main>
+      </div>
+    </>
+  );
+}
