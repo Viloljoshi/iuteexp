@@ -9,6 +9,7 @@ import { ProblemFrame } from "@/components/ProblemFrame";
 import { FailureStateExplorer, ServiceBlueprint } from "@/components/ServiceBlueprint";
 import { SiteHeader } from "@/components/SiteHeader";
 import { WireframeGallery } from "@/components/WireframeGallery";
+import { MarketLens } from "@/components/MarketLens";
 import content from "@/data/content.json";
 
 const nav = [
@@ -104,7 +105,9 @@ export default function DeepDivePage() {
           </section>
 
           <section className="deep-section" id="opportunity">
-            <SectionHeading index="02" title="Choose where to focus" prompt="Compare customer value, distribution, economics, carrier fit, delivery effort and reuse potential." />
+            <SectionHeading index="02" title="Choose the market problem and product together" prompt="Demand, regulation, partners, trust and service change the product decision in each market." />
+            <MarketLens />
+            <h3 className="subsection-title">Then compare the product opportunities</h3>
             <OpportunityExplorer />
             <div className="opportunity-formula">
               <div><span>Selection logic. Inputs require evidence.</span><strong>Customer value × commercial potential × distribution advantage × strategic fit × evidence quality</strong></div>
@@ -283,7 +286,7 @@ export default function DeepDivePage() {
 
           <footer className="deep-footer">
             <SourceList />
-            <p>Prepared from public Iute material only. No access to non-public customer, carrier, financial, regulatory or operating information is claimed.</p>
+            <p>Prepared from public Iute, regulatory and supervisory sources. No access to non-public customer, carrier, financial or operating information is claimed.</p>
           </footer>
         </main>
       </div>

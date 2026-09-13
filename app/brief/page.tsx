@@ -217,7 +217,7 @@ export default function BriefPage() {
             </p>
           </section>
 
-          <SourceList className="brief-source-list" />
+          <SourceList className="brief-source-list" coreOnly />
 
           <footer className="brief-footer">
             <span>Prepared for discussion · Vilol Joshi · September 2026</span>

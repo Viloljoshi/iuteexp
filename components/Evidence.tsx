@@ -23,10 +23,12 @@ export function SourceLink({ id, compact = false }: { id: number; compact?: bool
   );
 }
 
-export function SourceList({ className = "" }: { className?: string }) {
+export function SourceList({ className = "", coreOnly = false }: { className?: string; coreOnly?: boolean }) {
+  const sources = coreOnly ? content.sources.filter((source) => source.id <= 5) : content.sources;
+
   return (
     <div className={`source-list ${className}`} aria-label="Sources">
-      {content.sources.map((source) => (
+      {sources.map((source) => (
         <SourceLink key={source.id} id={source.id} />
       ))}
     </div>

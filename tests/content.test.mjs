@@ -4,14 +4,31 @@ import test from "node:test";
 
 const data = JSON.parse(readFileSync(new URL("../data/content.json", import.meta.url), "utf8"));
 const journey = JSON.parse(readFileSync(new URL("../data/journey.json", import.meta.url), "utf8"));
+const markets = JSON.parse(readFileSync(new URL("../data/markets.json", import.meta.url), "utf8"));
 const deepDive = readFileSync(new URL("../app/deep-dive/page.tsx", import.meta.url), "utf8");
 const brief = readFileSync(new URL("../app/brief/page.tsx", import.meta.url), "utf8");
 
 test("all company facts point to declared public Iute sources", () => {
   const sourceIds = new Set(data.sources.map((source) => source.id));
   assert.ok(data.facts.length >= 3);
-  for (const fact of data.facts) assert.ok(sourceIds.has(fact.source));
-  for (const source of data.sources) assert.match(source.url, /^https:\/\/(?:[^/]+\.)?iute\.com\//);
+  for (const fact of data.facts) {
+    assert.ok(sourceIds.has(fact.source));
+    const source = data.sources.find((item) => item.id === fact.source);
+    assert.match(source.url, /^https:\/\/(?:[^/]+\.)?iute\.com\//);
+  }
+  for (const source of data.sources) assert.match(source.url, /^https:\/\//);
+});
+
+test("market lens covers every Iute market with evidence and internal checks", () => {
+  assert.deepEqual(markets.markets.map((market) => market.name).sort(), ["Albania", "Bulgaria", "Moldova", "North Macedonia", "Ukraine"]);
+  const sourceIds = new Set(data.sources.map((source) => source.id));
+  for (const market of markets.markets) {
+    assert.ok(market.sources.length > 0);
+    for (const source of market.sources) assert.ok(sourceIds.has(source));
+    assert.ok(market.signal.length > 40);
+    assert.ok(market.read.length > 30);
+    assert.equal(market.validate.length, 3);
+  }
 });
 
 test("opportunity language avoids fabricated precision", () => {

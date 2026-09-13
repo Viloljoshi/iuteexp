@@ -24,6 +24,36 @@
       "id": 5,
       "label": "Iute careers, customer promise and values",
       "url": "https://careers.iute.com/"
+    },
+    {
+      "id": 6,
+      "label": "Iute Group, markets",
+      "url": "https://iute.com/about-us/markets/"
+    },
+    {
+      "id": 7,
+      "label": "Albanian FSA, insurance market 2025",
+      "url": "https://amf.gov.al/news.asp?id=93356&lng=1"
+    },
+    {
+      "id": 8,
+      "label": "National Bank of Moldova, insurance sector 2025",
+      "url": "https://www.bnm.md/ro/content/situatia-financiara-sectorului-asigurari-pentru-anul-2025"
+    },
+    {
+      "id": 9,
+      "label": "North Macedonia ISA, insurance market 2024",
+      "url": "https://aso.mk/wp-content/uploads/2025/09/godisen-izvestaj-za-osiguritelniot-pazar-vo-2024_en.pdf"
+    },
+    {
+      "id": 10,
+      "label": "European Commission, insurance distribution",
+      "url": "https://finance.ec.europa.eu/banking/insurance/insurance-distribution_en"
+    },
+    {
+      "id": 11,
+      "label": "National Bank of Ukraine, Financial Stability Report 2025",
+      "url": "https://bank.gov.ua/admin_uploads/article/FSR_2025-H2_eng.pdf?v=16"
     }
   ],
   "facts": [

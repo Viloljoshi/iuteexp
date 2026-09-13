@@ -1,0 +1,81 @@
+{
+  "markets": [
+    {
+      "id": "albania",
+      "name": "Albania",
+      "focus": "Trust and motor journey",
+      "signal": "In 2025, non-life represented 90.99% of premium and compulsory insurance 62.38%. Domestic MTPL contracts grew 6.85%. Iute has also reported that some customers still expect a physical vehicle and paperwork during a digital journey.",
+      "sources": [7, 2],
+      "read": "Motor has a clear need and a familiar purchase. The harder problem may be trusted proof and service, not awareness alone.",
+      "validate": [
+        "Why customers choose digital, branch or paper routes",
+        "Proof downloads, print requests and cover-status contacts",
+        "Renewal behaviour by channel, carrier and journey version"
+      ]
+    },
+    {
+      "id": "moldova",
+      "name": "Moldova",
+      "focus": "Carrier economics",
+      "signal": "In 2025, general insurance represented 96.7% of premium and motor classes 71.6%. The sector average combined operating ratio rose above 100%.",
+      "sources": [8],
+      "read": "Motor is large, but distribution growth can destroy value if claims and carrier economics do not hold.",
+      "validate": [
+        "Price, loss ratio, claims service and capacity by carrier",
+        "Customer switching and renewal reasons",
+        "Contribution after service, payment and exception cost"
+      ]
+    },
+    {
+      "id": "north-macedonia",
+      "name": "North Macedonia",
+      "focus": "Demand and partner fit",
+      "signal": "Official 2024 reporting showed gross written premium growth of 11.32%, insurance penetration of 1.67% of GDP, and 11 non-life insurers.",
+      "sources": [9],
+      "read": "Growth and low penetration create room to test. They do not prove which product, partner or customer moment will work.",
+      "validate": [
+        "Unmet need, current alternative and willingness to pay",
+        "Carrier appetite, product gap and distribution terms",
+        "Claim experience, service access and trust by segment"
+      ]
+    },
+    {
+      "id": "bulgaria",
+      "name": "Bulgaria",
+      "focus": "EU distribution readiness",
+      "signal": "As an EU market, insurance distribution follows IDD requirements on needs, transparency, conduct and standardised product information for non-life insurance.",
+      "sources": [10],
+      "read": "Technology can be shared across markets. Product governance, disclosure and the distributor role need a Bulgaria-specific design.",
+      "validate": [
+        "Distributor role, advice boundary and demands-and-needs process",
+        "Local IPID, language, consent and complaint requirements",
+        "Carrier integration, digital signature and payment rules"
+      ]
+    },
+    {
+      "id": "ukraine",
+      "name": "Ukraine",
+      "focus": "Resilience and service",
+      "signal": "The NBU reported that MTPL became the largest premium line in 2025. New direct-settlement rules increased the importance of choosing a reliable insurer amid continued market uncertainty.",
+      "sources": [11],
+      "read": "Partner quality, service continuity and clear exclusions are part of the proposition, not backstage details.",
+      "validate": [
+        "Carrier resilience, territorial limits and war-risk exclusions",
+        "Document and claim access during disruption",
+        "Fallback communication, payments and service ownership"
+      ]
+    }
+  ],
+  "shared": [
+    "Core policy and claim objects",
+    "Journey state model",
+    "Consent and audit pattern",
+    "Event and control definitions"
+  ],
+  "local": [
+    "Customer need and moment",
+    "Carrier, cover and price",
+    "Distribution and disclosure",
+    "Payments, service and claims"
+  ]
+}
