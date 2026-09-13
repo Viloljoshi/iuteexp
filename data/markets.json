@@ -4,9 +4,9 @@
       "id": "albania",
       "name": "Albania",
       "focus": "Trust and motor journey",
-      "signal": "In 2025, non-life represented 90.99% of premium and compulsory insurance 62.38%. Domestic MTPL contracts grew 6.85%. Iute has also reported that some customers still expect a physical vehicle and paperwork during a digital journey.",
-      "sources": [7, 2],
-      "read": "Motor has a clear need and a familiar purchase. The harder problem may be trusted proof and service, not awareness alone.",
+      "signal": "In 2025, compulsory insurance represented 62.38% of premium and domestic MTPL contracts grew 6.85%. From 2026, bonus-malus and seven risk factors shape MTPL pricing. MyIute already provides a digital purchase route.",
+      "sources": [7, 17, 12],
+      "read": "Motor demand and digital access already exist. The harder problem may be trusted proof, renewal and service ownership, not awareness alone.",
       "validate": [
         "Why customers choose digital, branch or paper routes",
         "Proof downloads, print requests and cover-status contacts",

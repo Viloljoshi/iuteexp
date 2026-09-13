@@ -1,15 +1,19 @@
+import Link from "next/link";
 import { Appendix } from "@/components/Appendix";
 import { AnalysisLoop } from "@/components/AnalysisLoop";
 import { DecisionIntelligence } from "@/components/DecisionIntelligence";
 import { DistributionFunnel } from "@/components/DistributionFunnel";
 import { EvidenceTag, SourceLink, SourceList } from "@/components/Evidence";
+import { ExecutionProof } from "@/components/ExecutionProof";
 import { ArrowFlow, DecisionRecord, SectionHeading, ThreeSidedModel } from "@/components/Models";
-import { EvidencePlan, OpportunityExplorer } from "@/components/OpportunityExplorer";
+import { OpportunityExplorer } from "@/components/OpportunityExplorer";
 import { ProblemFrame } from "@/components/ProblemFrame";
 import { FailureStateExplorer, ServiceBlueprint } from "@/components/ServiceBlueprint";
 import { SiteHeader } from "@/components/SiteHeader";
 import { WireframeGallery } from "@/components/WireframeGallery";
 import { MarketLens } from "@/components/MarketLens";
+import { AlbaniaDecisionRoom } from "@/components/AlbaniaDecisionRoom";
+import { ThinkingLoop } from "@/components/ThinkingLoop";
 import content from "@/data/content.json";
 
 const nav = [
@@ -36,7 +40,7 @@ export default function DeepDivePage() {
           <nav aria-label="Deep-dive sections">
             {nav.map(([index, label, id]) => <a href={`#${id}`} key={id}><span>{index}</span>{label}</a>)}
           </nav>
-          <a className="chapter-brief-link" href="/brief/">Open 2-page brief</a>
+          <Link className="chapter-brief-link" href="/brief/">Open 2-page brief</Link>
         </aside>
 
         <main className="deep-main">
@@ -80,6 +84,8 @@ export default function DeepDivePage() {
           <section className="deep-section" id="capability">
             <SectionHeading index="01" title="Define the problem before the solution" prompt="Use public signals to form the question. Use Iute data to confirm who is affected, where the journey fails and what it costs." />
             <ProblemFrame />
+            <h3 className="subsection-title">Make the reasoning visible</h3>
+            <ThinkingLoop />
             <h3 className="subsection-title">Then decide what should continue after the first launch</h3>
             <div className="architecture-compare">
               <article>
@@ -107,6 +113,8 @@ export default function DeepDivePage() {
           <section className="deep-section" id="opportunity">
             <SectionHeading index="02" title="Choose the market problem and product together" prompt="Demand, regulation, partners, trust and service change the product decision in each market." />
             <MarketLens />
+            <h3 className="subsection-title">Make one market decision visible</h3>
+            <AlbaniaDecisionRoom />
             <h3 className="subsection-title">Then compare the product opportunities</h3>
             <OpportunityExplorer />
             <div className="opportunity-formula">
@@ -114,8 +122,6 @@ export default function DeepDivePage() {
               <i>÷</i>
               <div><span>Cost and risk to validate</span><strong>Partner complexity × operating complexity × regulation × build effort</strong></div>
             </div>
-            <h3 className="subsection-title">How I would find and prove the pain point</h3>
-            <EvidencePlan />
           </section>
 
           <section className="deep-section" id="viability">
@@ -155,7 +161,7 @@ export default function DeepDivePage() {
           </section>
 
           <section className="deep-section" id="proposition">
-            <SectionHeading index="04" title="Shape the proposition around a real customer job" prompt="Standalone motor is an example for discussion. It is not an internal roadmap claim." evidence="HYPOTHESIS" />
+            <SectionHeading index="04" title="Shape the proposition around a real customer job" prompt="Albania MTPL is a public outside-in learning case, not an internal roadmap recommendation." evidence="HYPOTHESIS" />
             <div className="worked-example-banner"><span>Illustrative application</span><strong>“I need certainty that owning and using my vehicle will not create an avoidable legal, financial or mobility burden.”</strong></div>
             <div className="proposition-layers">
               <article><span>01</span><h3>Coverage</h3><p>Core third-party protection, optional assistance, useful limits, material exclusions and clear proof of insurance.</p></article>
@@ -236,6 +242,7 @@ export default function DeepDivePage() {
               <article><strong>Fastest</strong><p>Measure time to a trusted outcome, including exception recovery.</p></article>
               <article><strong>Human touch</strong><p>Use automation to focus people where empathy, context or authority matter.</p></article>
             </div>
+            <ExecutionProof />
             <div className="fit-columns">
               <article className="fit-now">
                 <span>Value I can add now</span>
@@ -286,7 +293,7 @@ export default function DeepDivePage() {
 
           <footer className="deep-footer">
             <SourceList />
-            <p>Prepared from public Iute, regulatory and supervisory sources. No access to non-public customer, carrier, financial or operating information is claimed.</p>
+            <p>Prepared from public Iute, insurer, regulatory and supervisory sources. No access to non-public customer, carrier, financial or operating information is claimed.</p>
           </footer>
         </main>
       </div>

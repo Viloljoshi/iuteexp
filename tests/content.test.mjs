@@ -5,8 +5,12 @@ import test from "node:test";
 const data = JSON.parse(readFileSync(new URL("../data/content.json", import.meta.url), "utf8"));
 const journey = JSON.parse(readFileSync(new URL("../data/journey.json", import.meta.url), "utf8"));
 const markets = JSON.parse(readFileSync(new URL("../data/markets.json", import.meta.url), "utf8"));
+const albaniaDecision = JSON.parse(readFileSync(new URL("../data/albania-decision.json", import.meta.url), "utf8"));
 const deepDive = readFileSync(new URL("../app/deep-dive/page.tsx", import.meta.url), "utf8");
 const brief = readFileSync(new URL("../app/brief/page.tsx", import.meta.url), "utf8");
+const discussion = readFileSync(new URL("../components/DiscussionMode.tsx", import.meta.url), "utf8");
+const nextConfig = readFileSync(new URL("../next.config.ts", import.meta.url), "utf8");
+const pagesWorkflow = readFileSync(new URL("../.github/workflows/deploy-pages.yml", import.meta.url), "utf8");
 
 test("all company facts point to declared public Iute sources", () => {
   const sourceIds = new Set(data.sources.map((source) => source.id));
@@ -28,6 +32,19 @@ test("market lens covers every Iute market with evidence and internal checks", (
     assert.ok(market.signal.length > 40);
     assert.ok(market.read.length > 30);
     assert.equal(market.validate.length, 3);
+  }
+});
+
+test("Albania decision converts public evidence into an explicit test and decision", () => {
+  const sourceIds = new Set(data.sources.map((source) => source.id));
+  assert.match(albaniaDecision.stance, /VALIDATE/);
+  assert.equal(albaniaDecision.whyNow.length, 3);
+  assert.equal(albaniaDecision.assumptions.length, 3);
+  assert.equal(albaniaDecision.plan.length, 4);
+  assert.deepEqual(albaniaDecision.gates.map((gate) => gate.status), ["PROCEED", "CHANGE", "STOP"]);
+  assert.equal(albaniaDecision.alternatives.length, 4);
+  for (const record of [...albaniaDecision.whyNow, ...albaniaDecision.alternatives]) {
+    for (const source of record.sources) assert.ok(sourceIds.has(source));
   }
 });
 
@@ -71,6 +88,25 @@ test("deep dive keeps the eight core decisions and capability boundary", () => {
   }
   assert.match(deepDive, /Where I need Iute’s depth/);
   assert.match(deepDive, /would not set product priority/i);
+  assert.match(deepDive, /ThinkingLoop/);
+  assert.match(deepDive, /AlbaniaDecisionRoom/);
+  assert.match(deepDive, /ExecutionProof/);
+});
+
+test("discussion mode has six chapters and keyboard navigation", () => {
+  assert.equal((discussion.match(/number: "0[1-6]"/g) ?? []).length, 6);
+  assert.match(discussion, /ArrowRight/);
+  assert.match(discussion, /role="tabpanel"/);
+  assert.match(discussion, /aria-selected/);
+});
+
+test("GitHub Pages builds the exported site with the project base path", () => {
+  assert.match(nextConfig, /output: "export"/);
+  assert.match(nextConfig, /GITHUB_REPOSITORY/);
+  assert.match(nextConfig, /basePath/);
+  assert.match(pagesWorkflow, /npm run build/);
+  assert.match(pagesWorkflow, /path: \.\/out/);
+  assert.match(pagesWorkflow, /actions\/deploy-pages@v4/);
 });
 
 test("brief is explicitly split into two print pages", () => {

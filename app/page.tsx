@@ -24,6 +24,11 @@ export default function HomePage() {
         </section>
 
         <section className="experience-grid" aria-label="Choose an experience">
+          <Link className="experience-card experience-card-quick" href="/discussion/">
+            <span className="experience-number">6 minutes · 6 decisions</span>
+            <div><h2>Hiring-manager mode</h2><p>A concise, keyboard-ready route through the question, market decision, journey, proof and fit.</p></div>
+            <strong>Present the case</strong>
+          </Link>
           <Link className="experience-card" href="/brief/">
             <span className="experience-number">2 pages</span>
             <h2>Executive brief</h2>

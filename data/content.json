@@ -54,6 +54,36 @@
       "id": 11,
       "label": "National Bank of Ukraine, Financial Stability Report 2025",
       "url": "https://bank.gov.ua/admin_uploads/article/FSR_2025-H2_eng.pdf?v=16"
+    },
+    {
+      "id": 12,
+      "label": "Iute Albania, MyIute motor insurance journey",
+      "url": "https://iute.al/siguracioni-i-makines/"
+    },
+    {
+      "id": 13,
+      "label": "Albanian FSA, compulsory motor policy registry",
+      "url": "https://amf.gov.al/mtpl.asp"
+    },
+    {
+      "id": 14,
+      "label": "SIGAL, online motor insurance",
+      "url": "https://www.sigal.com.al/online/auto"
+    },
+    {
+      "id": 15,
+      "label": "ALBSIG, buy insurance online",
+      "url": "https://www.albsig.al/bli-siguracion-online/"
+    },
+    {
+      "id": 16,
+      "label": "EUROSIG, motor insurance",
+      "url": "https://www.eurosig.al/en/products/motor"
+    },
+    {
+      "id": 17,
+      "label": "Albanian FSA, 2026 MTPL and digitalisation priorities",
+      "url": "https://amf.gov.al/news.asp?id=133376&lng=1"
     }
   ],
   "facts": [

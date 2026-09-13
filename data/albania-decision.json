@@ -1,0 +1,99 @@
+{
+  "stance": "VALIDATE · DO NOT COPY YET",
+  "title": "Use Albania MTPL as the learning ground for the next launch",
+  "recommendation": "Improve and measure the existing MyIute motor journey before treating it as the template for another product or market.",
+  "whyNow": [
+    {
+      "text": "Compulsory insurance represented 62.38% of Albanian premiums in 2025, and domestic MTPL contracts grew 6.85%.",
+      "sources": [7]
+    },
+    {
+      "text": "From 2026, MTPL pricing uses bonus-malus and seven risk factors. The regulator requires electronic premium calculators.",
+      "sources": [17]
+    },
+    {
+      "text": "MyIute already offers plate-led pricing, four instalments at no added cost, in-app policy access and a SIGAL claims handoff.",
+      "sources": [12]
+    }
+  ],
+  "hypothesis": "Convenience is already visible. The next advantage may come from trusted cover status, renewal relevance and clear service ownership.",
+  "assumptions": [
+    "Payment flexibility creates incremental adoption or persistency, not only channel substitution.",
+    "Digital proof is trusted, while paper and human-help needs are handled without breaking the journey.",
+    "Carrier service, claims and exception economics remain healthy as volume grows."
+  ],
+  "plan": [
+    {
+      "period": "Days 1-5",
+      "title": "Baseline the journey",
+      "detail": "Funnel, issuance, proof access, service reasons, claims handoffs, renewal and contribution by cohort."
+    },
+    {
+      "period": "Days 6-12",
+      "title": "Explain the breaks",
+      "detail": "Interview buyers, abandoners and renewers. Review service, complaint and failed-issuance cases with operations."
+    },
+    {
+      "period": "Days 13-22",
+      "title": "Test the wedge",
+      "detail": "Prototype cover verification, renewal timing and ownership messages. Test comprehension before changing the full journey."
+    },
+    {
+      "period": "Days 23-30",
+      "title": "Make the decision",
+      "detail": "Review customer, Iute and carrier evidence together. Proceed, change the proposition or stop."
+    }
+  ],
+  "gates": [
+    {
+      "status": "PROCEED",
+      "title": "The trust-and-renewal wedge holds",
+      "evidence": "Better qualified completion or renewal, with stable complaints, exceptions, cost to serve and carrier service."
+    },
+    {
+      "status": "CHANGE",
+      "title": "Demand exists but the service breaks",
+      "evidence": "Fix proof, support or partner handoffs before adding reach, cover or another market."
+    },
+    {
+      "status": "STOP",
+      "title": "No incremental value or controllable economics",
+      "evidence": "Do not scale if demand is substitution, contribution is weak, or partner and control risks remain unresolved."
+    }
+  ],
+  "alternatives": [
+    {
+      "type": "Current Iute route",
+      "name": "MyIute + SIGAL",
+      "observed": "Plate-led pricing, four instalments, policy in app, renewal reminder and insurer-owned claims handling.",
+      "reading": "Convenience and financing are real. The next test is whether Iute can make status, renewal and service ownership more trusted.",
+      "sources": [12]
+    },
+    {
+      "type": "Insurer-direct digital",
+      "name": "SIGAL + ALBSIG",
+      "observed": "Public journeys already support online motor purchase or calculation. SIGAL also offers related motor and roadside products online.",
+      "reading": "Digital purchase alone is not a defensible difference. Relevance, payment, proof and lifecycle service must earn the choice.",
+      "sources": [14, 15]
+    },
+    {
+      "type": "Physical distribution",
+      "name": "Branches + agents",
+      "observed": "EUROSIG describes 33 branches, more than 230 agencies and points of sale, and an original policy copy for the customer.",
+      "reading": "Physical reach and paper proof are established alternatives. A digital route must preserve confidence and access to help.",
+      "sources": [16]
+    },
+    {
+      "type": "Market trust rail",
+      "name": "AFSA policy registry",
+      "observed": "Customers can verify current compulsory motor cover through the regulator's online registry or by SMS.",
+      "reading": "Verification is part of the experience. Surface it at the moment of doubt instead of expecting customers to find it.",
+      "sources": [13]
+    }
+  ],
+  "changeMyMind": [
+    "Another customer problem has materially higher unmet need and better three-sided economics.",
+    "Current MTPL performance shows trust and renewal are already strong, with no material service friction.",
+    "Carrier, regulatory or platform constraints make this a poor learning ground for reusable capability."
+  ]
+}
