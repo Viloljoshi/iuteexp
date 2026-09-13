@@ -1,16 +1,18 @@
 import { Appendix } from "@/components/Appendix";
+import { AnalysisLoop } from "@/components/AnalysisLoop";
 import { DecisionIntelligence } from "@/components/DecisionIntelligence";
 import { DistributionFunnel } from "@/components/DistributionFunnel";
 import { EvidenceTag, SourceLink, SourceList } from "@/components/Evidence";
 import { ArrowFlow, DecisionRecord, SectionHeading, ThreeSidedModel } from "@/components/Models";
 import { EvidencePlan, OpportunityExplorer } from "@/components/OpportunityExplorer";
+import { ProblemFrame } from "@/components/ProblemFrame";
 import { FailureStateExplorer, ServiceBlueprint } from "@/components/ServiceBlueprint";
 import { SiteHeader } from "@/components/SiteHeader";
 import { WireframeGallery } from "@/components/WireframeGallery";
 import content from "@/data/content.json";
 
 const nav = [
-  ["01", "Capability", "capability"],
+  ["01", "Problem", "capability"],
   ["02", "Opportunity", "opportunity"],
   ["03", "Viability", "viability"],
   ["04", "Proposition", "proposition"],
@@ -39,25 +41,32 @@ export default function DeepDivePage() {
         <main className="deep-main">
           <section className="deep-hero" id="top">
             <div className="deep-hero-topline">
-              <div><EvidenceTag kind="HYPOTHESIS" /><span>Outside-in working case · not an internal recommendation</span></div>
+              <div><EvidenceTag kind="HYPOTHESIS" /><span>Outside-in working case. Not an internal recommendation.</span></div>
               <span>Vilol Joshi · September 2026</span>
             </div>
-            <h1>Building a repeatable insurance growth engine</h1>
+            <h1>Make the next insurance launch better than the last</h1>
             <p className="deep-hero-lede">
-              How should Iute repeatedly turn protection opportunities into viable digital products across markets?
+              How can Iute grow standalone insurance while keeping customer trust, carrier economics and operations healthy?
             </p>
+            <ol className="case-route" aria-label="Case story">
+              <li><span>01</span><strong>Observe</strong><small>Public signals</small></li>
+              <li><span>02</span><strong>Define</strong><small>Customer problem</small></li>
+              <li><span>03</span><strong>Design</strong><small>Journey and service</small></li>
+              <li><span>04</span><strong>Prove</strong><small>Demand, economics, operations</small></li>
+              <li><span>05</span><strong>Scale</strong><small>Reuse or localise</small></li>
+            </ol>
             <div className="deep-thesis-grid">
               <p>
                 <span>Working thesis</span>
-                The long-term advantage is not simply another launch. It is a decision and operating system that lowers the cost, risk and uncertainty of every good launch that follows.
+                Solve one measurable problem. Prove demand, economics and operations. Reuse only what works.
               </p>
               <p>
-                <span>Evidence discipline</span>
-                Public fact is separated from interpretation. Unknowns are converted into discovery tasks. Internal evidence decides.
+                <span>Evidence rule</span>
+                Public facts frame the question. Iute customer, partner and operating data make the decision.
               </p>
               <p>
-                <span>Technology position</span>
-                Software, data and AI should increase the leverage of product judgment—not substitute for it.
+                <span>Technology rule</span>
+                Use rules first. Use ML or GenAI only when it improves a measured result with safe controls.
               </p>
             </div>
             <div className="public-evidence-strip">
@@ -68,7 +77,9 @@ export default function DeepDivePage() {
           </section>
 
           <section className="deep-section" id="capability">
-            <SectionHeading index="01" title="What capability are we really building?" prompt="Decision: standardise only what demonstrably repeats; do not start with a platform rewrite." evidence="INFERENCE" />
+            <SectionHeading index="01" title="Define the problem before the solution" prompt="Use public signals to form the question. Use Iute data to confirm who is affected, where the journey fails and what it costs." />
+            <ProblemFrame />
+            <h3 className="subsection-title">Then decide what should continue after the first launch</h3>
             <div className="architecture-compare">
               <article>
                 <div className="model-label">Product-by-product world</div>
@@ -87,25 +98,25 @@ export default function DeepDivePage() {
               </article>
             </div>
             <div className="commercial-chain">
-              <p><strong>The product is the complete commercial and operating system, not the purchase screen.</strong></p>
+              <p><strong>The product includes the commercial model, policy, service, controls and customer journey.</strong></p>
               <ArrowFlow compact items={operatingChain} />
             </div>
           </section>
 
           <section className="deep-section" id="opportunity">
-            <SectionHeading index="02" title="Select a problem worth solving" prompt="Decision: portfolio attractiveness must survive customer, distribution, economics, carrier, operating and scale constraints." />
+            <SectionHeading index="02" title="Choose where to focus" prompt="Compare customer value, distribution, economics, carrier fit, delivery effort and reuse potential." />
             <OpportunityExplorer />
             <div className="opportunity-formula">
-              <div><span>Decision aid—not a literal financial formula</span><strong>Customer value × commercial potential × distribution advantage × strategic fit × confidence</strong></div>
+              <div><span>Selection logic. Inputs require evidence.</span><strong>Customer value × commercial potential × distribution advantage × strategic fit × evidence quality</strong></div>
               <i>÷</i>
-              <div><span>Friction to validate</span><strong>Partner complexity × operating complexity × regulation × build effort</strong></div>
+              <div><span>Cost and risk to validate</span><strong>Partner complexity × operating complexity × regulation × build effort</strong></div>
             </div>
-            <h3 className="subsection-title">How I would establish customer evidence</h3>
+            <h3 className="subsection-title">How I would find and prove the pain point</h3>
             <EvidencePlan />
           </section>
 
           <section className="deep-section" id="viability">
-            <SectionHeading index="03" title="Make the proposition viable for all three parties" prompt="Decision: separate Iute’s intermediary contribution from the carrier’s underwriting economics—and manage both." />
+            <SectionHeading index="03" title="Make the proposition viable for all three parties" prompt="Model Iute contribution and carrier underwriting economics separately. Both must work." />
             <ThreeSidedModel />
             <div className="economics-chain-grid">
               <article>
@@ -141,7 +152,7 @@ export default function DeepDivePage() {
           </section>
 
           <section className="deep-section" id="proposition">
-            <SectionHeading index="04" title="Shape the proposition around a real customer job" prompt="Decision: use standalone motor as an intelligible example—not a claim about Iute’s internal roadmap." evidence="HYPOTHESIS" />
+            <SectionHeading index="04" title="Shape the proposition around a real customer job" prompt="Standalone motor is an example for discussion. It is not an internal roadmap claim." evidence="HYPOTHESIS" />
             <div className="worked-example-banner"><span>Illustrative application</span><strong>“I need certainty that owning and using my vehicle will not create an avoidable legal, financial or mobility burden.”</strong></div>
             <div className="proposition-layers">
               <article><span>01</span><h3>Coverage</h3><p>Core third-party protection, optional assistance, useful limits, material exclusions and clear proof of insurance.</p></article>
@@ -158,20 +169,20 @@ export default function DeepDivePage() {
           </section>
 
           <section className="deep-section" id="journey">
-            <SectionHeading index="05" title="Design decisions, not decorative screens" prompt="Decision: expose the customer job, commercial intent, data dependency, metric and failure control for every step." />
-            <div className="journey-ribbon"><ArrowFlow items={["Need", "Discover", "Quote", "Understand", "Bind", "Policy", "Service", "Claim", "Renew"]} /></div>
+            <SectionHeading index="05" title="Turn the problem into a customer journey" prompt="Each screen states the customer outcome, product choice, data to watch and control needed." />
             <WireframeGallery />
+            <AnalysisLoop />
           </section>
 
           <section className="deep-section" id="operations">
-            <SectionHeading index="06" title="Design what happens behind the screen—and when it breaks" prompt="Decision: each handoff and state transition needs ownership, observability and a truthful customer outcome." />
+            <SectionHeading index="06" title="Design the service and the failure states" prompt="Give every handoff and state change an owner, a record and a truthful customer message." />
             <ServiceBlueprint />
             <h3 className="subsection-title">The unhappy path is part of the product</h3>
             <FailureStateExplorer />
           </section>
 
           <section className="deep-section" id="measure">
-            <SectionHeading index="07" title="Measure causally. Scale selectively." prompt="Decision: diagnose the economic driver, prove operations, then extract the repeatable mechanism." />
+            <SectionHeading index="07" title="Measure the cause. Scale what works." prompt="Find the driver, prove the service and economics, then decide what to reuse." />
             <div className="measure-scale-grid">
               <article className="driver-tree">
                 <div className="model-label">Driver tree</div>
@@ -186,17 +197,17 @@ export default function DeepDivePage() {
               </article>
               <article className="scale-stack">
                 <div className="model-label">Multi-market model</div>
-                <h3>Standardise mechanisms; localise material difference.</h3>
+                <h3>Share the stable parts. Configure real market differences.</h3>
                 <div><span>Level 1</span><strong>Group standard</strong><p>Product principles · customer treatment · objects · events · audit · integration pattern</p></div>
                 <div><span>Level 2</span><strong>Product configuration</strong><p>Coverage · eligibility · documents · payments · claim requirements · service levels</p></div>
                 <div><span>Level 3</span><strong>Market configuration</strong><p>Carrier · regulation · language · currency · disclosure · local service · complaints · reporting</p></div>
               </article>
             </div>
-            <div className="proof-sequence"><span>Pilot</span><i>→</i><span>Product–market proof</span><i>→</i><span>Operational proof</span><i>→</i><span>Economic proof</span><i>→</i><span>Reusable capability</span><i>→</i><span>Next market</span></div>
+            <div className="proof-sequence"><span>Pilot</span><i>→</i><span>Product and market proof</span><i>→</i><span>Service proof</span><i>→</i><span>Economic proof</span><i>→</i><span>Shared capability</span><i>→</i><span>Next market</span></div>
           </section>
 
           <section className="deep-section" id="intelligence">
-            <SectionHeading index="08" title="Intelligence is a product choice, not a default architecture" prompt="Decision: start with the business problem and baseline; use the simplest reliable mechanism that improves the outcome." />
+            <SectionHeading index="08" title="Choose the simplest technology that works" prompt="Start with the problem and baseline. Add ML or GenAI only when the evidence earns it." />
             <DecisionIntelligence />
             <DecisionRecord
               decision="Automate claim-document intake"
@@ -213,24 +224,24 @@ export default function DeepDivePage() {
           <section className="candidate-section" id="candidate-value">
             <div className="candidate-heading">
               <span>Long-term fit</span>
-              <h2>Where I can add value, where I need Iute context, and how the value compounds</h2>
-              <p>Credibility comes from being explicit about both leverage and limits.</p>
+              <h2>What I can lead, what I need to learn, and what I can leave behind</h2>
+              <p>A clear split between proven experience and Iute-specific learning.</p>
             </div>
             <div className="iute-principles">
               <div className="iute-principles-label"><span>Product interpretation of Iute’s customer promise</span><SourceLink id={5} compact /></div>
               <article><strong>Most convenient</strong><p>Remove repeated questions, hidden partner routing and avoidable service work.</p></article>
-              <article><strong>Fastest</strong><p>Measure time to a trusted outcome—including exceptions—not only screen speed.</p></article>
+              <article><strong>Fastest</strong><p>Measure time to a trusted outcome, including exception recovery.</p></article>
               <article><strong>Human touch</strong><p>Use automation to focus people where empathy, context or authority matter.</p></article>
             </div>
             <div className="fit-columns">
               <article className="fit-now">
                 <span>Value I can add now</span>
-                <h3>Turn ambiguity into an operated product</h3>
+                <h3>Turn a vague opportunity into a measurable product</h3>
                 <ul>
-                  <li><strong>Regulated workflows:</strong> translate commercial, compliance and operating constraints into an end-to-end journey.</li>
-                  <li><strong>High-volume decision systems:</strong> 575K+ monthly cases with confidence routing and human review.</li>
+                  <li><strong>Regulated workflows:</strong> join commercial, compliance and service requirements in one journey.</li>
+                  <li><strong>High-volume operations:</strong> 575K+ monthly cases with evidence-based routing and human review.</li>
                   <li><strong>Measured automation:</strong> ~45% manual-review reduction and ~25% API turnaround improvement in prior financial workflows.</li>
-                  <li><strong>Engineering partnership:</strong> define state, failure, instrumentation, control and trade-offs without pretending to dictate architecture.</li>
+                  <li><strong>Engineering partnership:</strong> define states, failures, events, controls and trade-offs clearly.</li>
                 </ul>
               </article>
               <article className="fit-context">
@@ -240,7 +251,7 @@ export default function DeepDivePage() {
                   <li>Product-level carrier contracts, pricing, commission and portfolio economics.</li>
                   <li>Country-specific customer behaviour, distribution rules and regulatory practice.</li>
                   <li>Claims authority, servicing handoffs, operational exceptions and complaint themes.</li>
-                  <li>Which platform capabilities genuinely repeat—and which local differences deserve to remain local.</li>
+                  <li>Which platform capabilities repeat, and which local differences should stay local.</li>
                 </ul>
               </article>
               <article className="fit-compound">
@@ -254,7 +265,7 @@ export default function DeepDivePage() {
                 </ul>
               </article>
             </div>
-            <p className="candidate-boundary">Transferable patterns from regulated financial workflows—not a claim that insurance is identical to KYC or lending, and not a substitute for Iute’s insurance expertise.</p>
+            <p className="candidate-boundary">I can bring the method and execution discipline. I would not set product priority, pricing, carrier terms or claim policy from public information.</p>
           </section>
 
           <section className="deep-section appendix-section" id="appendix">
@@ -263,11 +274,11 @@ export default function DeepDivePage() {
           </section>
 
           <section className="discussion-close">
-            <div className="discussion-heading"><EvidenceTag kind="HYPOTHESIS" /><h2>What I would want to understand from the team</h2><p>Questions that would change a product decision—not performative questions at the end of an interview.</p></div>
+            <div className="discussion-heading"><EvidenceTag kind="HYPOTHESIS" /><h2>What I would want to learn from the team</h2><p>Six questions that could change the product decision.</p></div>
             <div className="question-grid">
               {content.questions.map((item) => <article key={item.topic}><span>{item.topic}</span><p>{item.question}</p></article>)}
             </div>
-            <blockquote>These are outside-in hypotheses rather than recommendations. I’m looking forward to understanding where they align—or conflict—with what the team is seeing internally.</blockquote>
+            <blockquote>This is a starting case, not a recommendation. I want to test it against what the team sees in customer, partner and operating data.</blockquote>
           </section>
 
           <footer className="deep-footer">

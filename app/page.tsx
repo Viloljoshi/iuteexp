@@ -12,10 +12,10 @@ export default function HomePage() {
             <EvidenceTag kind="HYPOTHESIS" />
             <span>Outside-in working case · September 2026</span>
           </div>
-          <h1>Building a repeatable insurance growth engine</h1>
+          <h1>Make the next insurance launch better than the last</h1>
           <p className="home-lede">
-            How Iute could repeatedly turn protection opportunities into viable digital products across
-            markets—without losing sight of carrier economics, operating reality or customer trust.
+            A practical case for how Iute can choose, launch and improve digital insurance across markets
+            while protecting customer trust, carrier economics and service quality.
           </p>
           <p className="home-note">
             Prepared for a hiring-manager conversation. Public information is separated from inference;
@@ -46,11 +46,11 @@ export default function HomePage() {
           </div>
           <div>
             <EvidenceTag kind="INFERENCE" />
-            <p>The constraint is increasingly repeatable selection and execution—not simply product ideation.</p>
+            <p>The next challenge is choosing where to focus and learning from each launch.</p>
           </div>
           <div>
             <EvidenceTag kind="HYPOTHESIS" />
-            <p>Context, lifecycle reliability and one-front-door service may matter as much as breadth of cover.</p>
+            <p>Relevance, clear proof of cover and reliable service may create more value than adding products alone.</p>
           </div>
         </section>
       </main>

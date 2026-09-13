@@ -3,7 +3,7 @@ import "@fontsource-variable/manrope";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Building a Repeatable Insurance Growth Engine",
+  title: "Make the Next Insurance Launch Better Than the Last",
   description:
     "An outside-in product operating thesis for Iute, prepared for an Insurance Product Lead discussion.",
 };

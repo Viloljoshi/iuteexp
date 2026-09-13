@@ -27,8 +27,8 @@ export default function BriefPage() {
           <header className="brief-masthead">
             <div>
               <p className="document-type">Executive working brief · 01 / 02</p>
-              <h1>Building a repeatable insurance growth engine</h1>
-              <p>An outside-in product operating thesis for Iute</p>
+              <h1>Make the next insurance launch better than the last</h1>
+              <p>A practical product case for Iute</p>
             </div>
             <div className="brief-author">
               <strong>Vilol Joshi</strong>
@@ -48,7 +48,7 @@ export default function BriefPage() {
           <section className="brief-section strategic-read">
             <div className="brief-section-title">
               <span>Strategic read</span>
-              <h2>The advantage is reducing the cost and uncertainty of launching the next successful product.</h2>
+              <h2>Each launch should reduce the cost and risk of the next.</h2>
             </div>
             <div className="strategic-shift">
               <div>
@@ -129,9 +129,9 @@ export default function BriefPage() {
           <section className="brief-section lifecycle-section">
             <div className="brief-section-title brief-section-title-inline">
               <span>Complete lifecycle</span>
-              <h2>Design the policy, service, claim and renewal—not only the sale.</h2>
+              <h2>Design the policy, service, claim and renewal as one product.</h2>
             </div>
-            <ArrowFlow items={lifecycle} />
+            <ArrowFlow items={lifecycle} compact />
             <div className="mini-blueprint">
               <div className="blueprint-label">
                 <strong>Front stage</strong>
@@ -159,7 +159,7 @@ export default function BriefPage() {
             <section className="brief-section decision-tech">
               <div className="brief-section-title">
                 <span>Decision technology</span>
-                <h2>Use the simplest reliable mechanism.</h2>
+                <h2>Use the simplest reliable tool.</h2>
               </div>
               <div className="mechanism-flow">
                 <div><strong>Answer defined?</strong><span>Rules / software</span></div>
@@ -167,7 +167,7 @@ export default function BriefPage() {
                 <div><strong>Unstructured content?</strong><span>GenAI, grounded</span></div>
                 <div><strong>High consequence or ambiguity?</strong><span>Human control</span></div>
               </div>
-              <p className="micro-copy">The consequence of error—not confidence alone—determines automation.</p>
+              <p className="micro-copy">Error impact determines the control level. Model confidence does not.</p>
             </section>
 
             <section className="brief-section outcome-model">
@@ -187,7 +187,7 @@ export default function BriefPage() {
           <section className="brief-section capability-section">
             <div className="brief-section-title brief-section-title-inline">
               <span>Capability fit</span>
-              <h2>Patterns I can contribute—and the insurance depth I want to build with Iute.</h2>
+              <h2>What I can add now, and what I want to learn from Iute.</h2>
             </div>
             <div className="capability-grid">
               <div className="capability-proof">
@@ -206,14 +206,14 @@ export default function BriefPage() {
               </div>
             </div>
             <p className="transfer-note">
-              These are transferable patterns from regulated financial workflows—not a claim that insurance is identical to KYC or lending.
+              These patterns come from regulated financial workflows. Iute’s insurance expertise and customer evidence remain essential.
             </p>
           </section>
 
           <section className="brief-close">
             <EvidenceTag kind="HYPOTHESIS" />
             <p>
-              These are outside-in hypotheses rather than recommendations. I’m looking forward to understanding where they align—or conflict—with what the team is seeing internally.
+              This is a starting case, not a recommendation. I want to test it against Iute’s customer, partner and operating data.
             </p>
           </section>
 

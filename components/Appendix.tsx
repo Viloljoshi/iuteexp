@@ -74,26 +74,26 @@ export function Appendix() {
       </details>
 
       <details className="appendix-item">
-        <summary><span>A6</span><div><strong>Country rollout model</strong><small>Standardise mechanisms; localise material difference</small></div><i>+</i></summary>
+        <summary><span>A6</span><div><strong>Country rollout model</strong><small>Share stable parts; configure real market differences</small></div><i>+</i></summary>
         <div className="appendix-content">
           <div className="table-scroll"><table className="data-table rollout-table"><thead><tr><th>Market</th><th>Demand</th><th>Reach</th><th>Carrier</th><th>Economics</th><th>Regulation</th><th>Operations</th><th>Data</th><th>Role</th></tr></thead><tbody>
             {["Albania", "Moldova", "North Macedonia", "Bulgaria", "Ukraine"].map((market) => <tr key={market}><th>{market}</th>{Array.from({ length: 7 }).map((_, index) => <td key={index}><span className="confidence confidence-unknown">Validate</span></td>)}<td>{market === "Albania" ? "Potential proof context" : "Determine from evidence"}</td></tr>)}
           </tbody></table></div>
-          <div className="rollout-sequence"><span>Pilot</span><i>→</i><span>Product–market proof</span><i>→</i><span>Operational proof</span><i>→</i><span>Economic proof</span><i>→</i><span>Extract reusable capability</span><i>→</i><span>Next market</span></div>
+          <div className="rollout-sequence"><span>Pilot</span><i>→</i><span>Product and market proof</span><i>→</i><span>Service proof</span><i>→</i><span>Economic proof</span><i>→</i><span>Extract shared capability</span><i>→</i><span>Next market</span></div>
         </div>
       </details>
 
       <details className="appendix-item">
-        <summary><span>A7</span><div><strong>AI use-case register</strong><small>Baseline, mechanism, business KPI, control and rollback</small></div><i>+</i></summary>
+        <summary><span>A7</span><div><strong>AI use-case register</strong><small>Baseline, approach, business KPI, control and rollback</small></div><i>+</i></summary>
         <div className="appendix-content"><AIUseCaseTable /><p className="appendix-thesis">The best AI product decision may sometimes be not deploying AI.</p></div>
       </details>
 
       <details className="appendix-item">
-        <summary><span>A8</span><div><strong>30 / 60 / 90</strong><small>Evidence before theatre</small></div><i>+</i></summary>
+        <summary><span>A8</span><div><strong>30 / 60 / 90</strong><small>Evidence before commitments</small></div><i>+</i></summary>
         <div className="appendix-content ninety-grid">
           <article><span>First 30 · understand</span><h4>Build the fact base</h4><p>Portfolio economics, product performance, country variation, contracts, customer evidence, claims, operating model, technology, compliance and team.</p><strong>Output: constraint + opportunity map</strong></article>
-          <article><span>Days 31–60 · prioritise</span><h4>Make one real choice</h4><p>Validate customer need, economics, partner feasibility, regulatory path and delivery complexity for the highest-value opportunity or bottleneck.</p><strong>Output: decision-ready case</strong></article>
-          <article><span>Days 61–90 · execute</span><h4>Move an outcome</h4><p>Advance one meaningful initiative, instrument its drivers, remove one operating bottleneck and establish a cross-market decision cadence.</p><strong>Output: measurable progress</strong></article>
+          <article><span>Days 31 to 60 · prioritise</span><h4>Make one real choice</h4><p>Validate customer need, economics, partner feasibility, regulatory path and delivery complexity for the highest-value opportunity or bottleneck.</p><strong>Output: decision-ready case</strong></article>
+          <article><span>Days 61 to 90 · execute</span><h4>Move an outcome</h4><p>Advance one meaningful initiative, instrument its drivers, remove one operating bottleneck and establish a cross-market decision cadence.</p><strong>Output: measurable progress</strong></article>
         </div>
       </details>
     </div>

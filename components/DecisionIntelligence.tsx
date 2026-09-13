@@ -43,7 +43,7 @@ const useCases = [
     baseline: "Broad or context-poor distribution",
     mechanism: "Predictive ML / uplift",
     metric: "Incremental bind lift",
-    reason: "Rank likely incremental response—not merely likelihood to buy anyway.",
+    reason: "Rank likely incremental response. Do not target people who would buy anyway.",
     rollout: "Offline → controlled experiment",
     stop: "No incremental lift; complaints, opt-outs or core-flow harm increase"
   },
@@ -93,7 +93,7 @@ export function DecisionIntelligence() {
       </div>
       <div className="mechanism-detail" role="tabpanel">
         <div><span>Use</span><p>{item.use}</p></div>
-        <div><span>Why this mechanism</span><p>{item.why}</p></div>
+        <div><span>Why it fits</span><p>{item.why}</p></div>
         <div><span>Required control</span><p>{item.control}</p></div>
       </div>
       <div className="impact-confidence">
@@ -112,7 +112,7 @@ export function AIUseCaseTable() {
   return (
     <div className="table-scroll">
       <table className="data-table ai-table">
-        <thead><tr><th>Use case</th><th>Baseline problem</th><th>Mechanism</th><th>Business measure</th><th>Why not simpler</th><th>Launch mode</th><th>Kill / rollback</th></tr></thead>
+        <thead><tr><th>Use case</th><th>Baseline problem</th><th>Approach</th><th>Business measure</th><th>Why not simpler</th><th>Launch mode</th><th>Kill / rollback</th></tr></thead>
         <tbody>
           {useCases.map((item) => (
             <tr key={item.name}>

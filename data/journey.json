@@ -1,0 +1,152 @@
+{
+  "signals": [
+    {
+      "horizon": "Now",
+      "source": 2,
+      "fact": "Some new insurance products and customer experience features have had mixed reception.",
+      "challenge": "Fit and trust may be the problem, not delivery speed.",
+      "response": "Analyse by customer moment, product, market and service outcome.",
+      "proof": "Comprehension, qualified starts, bind, service contacts and complaints."
+    },
+    {
+      "horizon": "Now",
+      "source": 2,
+      "fact": "Some Albanian customers still expect a physical vehicle and paperwork, despite an in-app journey.",
+      "challenge": "Digital completion does not prove that customers trust the cover.",
+      "response": "Give customers verifiable status, printable proof and human help.",
+      "proof": "Proof retrieval, print requests, verification and ‘am I covered?’ contacts."
+    },
+    {
+      "horizon": "Next",
+      "source": 2,
+      "fact": "6M 2026 insurance revenue grew 59.6%. Standalone motor and health were targeted for later in 2026.",
+      "challenge": "Standalone products add discovery, renewal, service and claims work.",
+      "response": "Use one journey: discover, understand, activate, prove, use and renew.",
+      "proof": "Incremental adoption and renewal, with complaint, exception and economic guardrails."
+    }
+  ],
+  "stages": [
+    {
+      "id": "relevance",
+      "phase": "Discover",
+      "label": "Why now",
+      "eyebrow": "Contextual entry",
+      "customerOutcome": "I understand why this offer is relevant. I can dismiss it.",
+      "decision": "Explain the trigger before asking for attention.",
+      "evidence": "Qualified detail views; dismissals; downstream bind by entry context.",
+      "control": "Use only approved or customer-declared context. Never imply certainty.",
+      "event": "protection_offer_opened",
+      "metric": "Incremental qualified starts",
+      "challenge": "A product shelf creates visibility, not relevance."
+    },
+    {
+      "id": "cover",
+      "phase": "Choose",
+      "label": "Build cover",
+      "eyebrow": "Comparable value",
+      "customerOutcome": "I can see what changes between options in situations I recognise.",
+      "decision": "Compare outcomes first; price and policy language second.",
+      "evidence": "Option changes; comparison opens; quote-to-review progression.",
+      "control": "Carrier-approved wording, eligibility and price remain deterministic.",
+      "event": "cover_option_selected",
+      "metric": "Comprehension-qualified quote rate",
+      "challenge": "Insurance labels are easy to scan and hard to understand."
+    },
+    {
+      "id": "understand",
+      "phase": "Choose",
+      "label": "Know the cover",
+      "eyebrow": "Comprehension gate",
+      "customerOutcome": "I know what is covered, what is not and where limits apply.",
+      "decision": "Use three concrete scenarios and preserve full policy access.",
+      "evidence": "Scenario expands; exclusions opens; correction and abandonment points.",
+      "control": "No generated policy wording. Version every disclosure accepted.",
+      "event": "coverage_review_completed",
+      "metric": "Informed progression",
+      "challenge": "Fast checkout can leave the customer unsure what is covered."
+    },
+    {
+      "id": "activate",
+      "phase": "Activate",
+      "label": "Issue safely",
+      "eyebrow": "Exception state",
+      "customerOutcome": "I know my money is safe, my cover is not active and what happens next.",
+      "decision": "Separate payment success from policy activation. Suppress repeat payment.",
+      "evidence": "Exception age; duplicate attempts; support contact; time to resolution.",
+      "control": "One transaction ID, reconciliation owner, SLA timer and escalation path.",
+      "event": "issuance_pending_shown",
+      "metric": "Unresolved issuance exceptions",
+      "challenge": "Payment can succeed while carrier issuance fails or times out."
+    },
+    {
+      "id": "proof",
+      "phase": "Use",
+      "label": "Prove cover",
+      "eyebrow": "Policy wallet",
+      "customerOutcome": "I can verify, download or print proof. I know who carries the risk.",
+      "decision": "Make active status and evidence more prominent than product promotion.",
+      "evidence": "Wallet opens; verification; downloads; print requests; service contacts.",
+      "control": "Status comes from policy records, not front-end assumption.",
+      "event": "policy_proof_accessed",
+      "metric": "Self-service proof success",
+      "challenge": "Trust is tested after purchase, often outside the original channel."
+    },
+    {
+      "id": "claim",
+      "phase": "Use",
+      "label": "Get help",
+      "eyebrow": "One front door",
+      "customerOutcome": "I can report the incident once and see who owns the next step.",
+      "decision": "Ask only for evidence needed now; expose hand-offs and status.",
+      "evidence": "Completion; evidence rework; status checks; time to first response.",
+      "control": "A person handles vulnerable, disputed or unclear cases.",
+      "event": "claim_intake_submitted",
+      "metric": "Right-first-time intake",
+      "challenge": "Partner hand-offs can make the customer repeat the story."
+    }
+  ],
+  "loop": [
+    {
+      "title": "Observe",
+      "question": "Where does the customer stop or ask for help?",
+      "input": "Journey events, exception queues, service reasons, complaints and claim cases.",
+      "action": "Cut by market, product, entry context, carrier and journey version.",
+      "exit": "A bounded problem with an affected cohort and baseline."
+    },
+    {
+      "title": "Diagnose",
+      "question": "Is it relevance, comprehension, trust or operations?",
+      "input": "Behavioural funnel plus customer and frontline evidence.",
+      "action": "Trace the failure across customer, Iute and carrier. Do not stop at the screen.",
+      "exit": "A causal hypothesis and the evidence that could disprove it."
+    },
+    {
+      "title": "Decide",
+      "question": "What is the smallest valuable intervention?",
+      "input": "Expected customer value, economics, operational load and risk.",
+      "action": "Write the decision, owner, guardrail and rollback condition.",
+      "exit": "One prioritised bet; explicit non-goals."
+    },
+    {
+      "title": "Instrument",
+      "question": "What must be knowable on day one?",
+      "input": "Primary outcome, guardrails and failure states.",
+      "action": "Define event, state, version and reconciliation evidence before build.",
+      "exit": "A testable release with no critical blind spot."
+    },
+    {
+      "title": "Release",
+      "question": "Can this fail safely?",
+      "input": "Launch gates, monitoring, support readiness and carrier SLA.",
+      "action": "Stage exposure; rehearse exceptions; keep a kill switch and accountable owner.",
+      "exit": "Controlled exposure with recoverable failure."
+    },
+    {
+      "title": "Learn",
+      "question": "Did behaviour, trust and economics move together?",
+      "input": "Experiment result, cohort quality, operations and customer evidence.",
+      "action": "Scale, revise or stop. Record the reason and the result.",
+      "exit": "A proven shared component or a documented local exception."
+    }
+  ]
+}

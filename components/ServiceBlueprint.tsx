@@ -12,8 +12,8 @@ const blueprints: Record<Journey, { stages: string[]; lanes: Array<{ name: strin
       { name: "MyIute", cells: ["Renders context", "Collects minimum", "Records consent", "Shows status", "Shows pending", "Policy home", "Service entry"] },
       { name: "Orchestration", cells: ["Loads version", "Normalises quote", "Locks version", "Links payment", "Idempotent bind", "Stores policy", "Matches states"] },
       { name: "Iute Affinity / ops", cells: ["Product rule", "Exception route", "Audit evidence", "Visibility", "Failed-bind owner", "Document check", "Exception queue"] },
-      { name: "Carrier", cells: ["Pre-check if needed", "Quote + expiry", "Terms source", "—", "Bind response", "Policy + docs", "Policy ledger"] },
-      { name: "Payments / finance", cells: ["—", "Price display", "Billing basis", "Auth / capture", "Hold / refund", "Settlement entry", "Commission + refund"] },
+      { name: "Carrier", cells: ["Pre-check if needed", "Quote + expiry", "Terms source", "N/A", "Bind response", "Policy + docs", "Policy ledger"] },
+      { name: "Payments / finance", cells: ["N/A", "Price display", "Billing basis", "Auth / capture", "Hold / refund", "Settlement entry", "Commission + refund"] },
       { name: "Compliance / service", cells: ["Distribution rule", "Disclosure", "Consent evidence", "Support context", "Customer update", "Help + complaint", "Reporting"] }
     ]
   },
@@ -25,7 +25,7 @@ const blueprints: Record<Journey, { stages: string[]; lanes: Array<{ name: strin
       { name: "Orchestration", cells: ["Creates claim", "Pins product version", "Links evidence", "Routes owner", "Records decision", "Closes state", "Emits events"] },
       { name: "Iute Affinity / ops", cells: ["Triage", "Coverage workflow", "Completeness", "Exception handling", "Quality control", "Customer routing", "Root-cause review"] },
       { name: "Carrier / TPA", cells: ["Receives FNOL", "Rule source", "Requirements", "Assessment", "Decision authority", "Pay / provide", "Portfolio MI"] },
-      { name: "Payments / finance", cells: ["—", "Policy status", "—", "Reserve visibility", "Amount", "Payment", "Reconciliation"] },
+      { name: "Payments / finance", cells: ["N/A", "Policy status", "N/A", "Reserve visibility", "Amount", "Payment", "Reconciliation"] },
       { name: "Compliance / service", cells: ["Support", "Fair treatment", "Sensitive data", "Escalation", "Decision wording", "Complaint path", "Reporting"] }
     ]
   }
@@ -39,7 +39,7 @@ export function ServiceBlueprint() {
     <div className="service-blueprint">
       <div className="blueprint-toolbar">
         <div>
-          <span>Customer experience above · operating system below</span>
+          <span>Customer experience above · service delivery below</span>
           <h3>{journey === "purchase" ? "Purchase blueprint" : "Claim + service blueprint"}</h3>
         </div>
         <div className="segmented-control" role="group" aria-label="Blueprint journey">

@@ -22,7 +22,7 @@ export function OpportunityExplorer() {
     <div className="opportunity-explorer">
       <div className="opportunity-matrix-wrap">
         <div className="opportunity-legend">
-          <span>Illustrative confidence language</span>
+          <span>Illustrative evidence level</span>
           <div><ConfidenceMark value="High" /><ConfidenceMark value="Medium" /><ConfidenceMark value="Unknown" /></div>
         </div>
         <div className="opportunity-matrix" aria-label="Illustrative opportunity comparison">
@@ -83,19 +83,19 @@ export function OpportunityExplorer() {
 
 export function EvidencePlan() {
   const lenses = [
-    ["Behaviour", "Funnels, renewal, service, claims, payment, channel and cohort evidence."],
-    ["Voice", "Buyers, abandoners, claimants, cancellers, frontline staff and complaints."],
-    ["Market", "Alternatives, price, carrier products, regulation and distribution structure."],
-    ["Experiment", "Whether a change in proposition, timing or journey caused incremental behaviour."],
+    ["01", "Locate", "Find the break in funnels, renewals, service, claims and payments. Cut by market, product, channel and cohort."],
+    ["02", "Explain", "Interview buyers, abandoners, claimants, cancellers and frontline staff. Read complaint cases."],
+    ["03", "Frame", "Write the affected customer, job, pain point, cause, current alternative and business effect."],
+    ["04", "Prove", "Test whether a change in proposition, timing or journey causes better behaviour without worse guardrails."],
   ];
 
   return (
     <div className="evidence-plan">
-      {lenses.map(([name, copy]) => (
-        <article key={name}><strong>{name}</strong><p>{copy}</p></article>
+      {lenses.map(([index, name, copy]) => (
+        <article key={name}><span>{index}</span><strong>{name}</strong><p>{copy}</p></article>
       ))}
       <p className="evidence-plan-thesis">
-        Market research shows what is possible. Behaviour shows what is happening. Customer research explains why. Experiments show whether the intervention caused improvement.
+        Behaviour locates the break. Research explains it. A controlled test shows whether the response caused improvement.
       </p>
     </div>
   );

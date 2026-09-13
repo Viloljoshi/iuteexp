@@ -44,7 +44,7 @@
     {
       "id": "motor",
       "name": "Standalone motor",
-      "note": "Illustrative worked example — not a roadmap recommendation",
+      "note": "Illustrative worked example. Not a roadmap recommendation.",
       "scores": ["High", "High", "Unknown", "Medium", "Medium", "High"],
       "interview": {
         "Customer": ["Vehicle owner or driver", "Avoid legal, financial and mobility disruption", "Current alternative and renewal behaviour to validate"],
@@ -58,7 +58,7 @@
     {
       "id": "health",
       "name": "Health + assistance",
-      "note": "Illustrative comparison — requires deeper customer and privacy evidence",
+      "note": "Illustrative comparison. Requires deeper customer and privacy evidence.",
       "scores": ["High", "Medium", "Unknown", "Unknown", "High", "Medium"],
       "interview": {
         "Customer": ["Households seeking access and cost certainty", "Need intensity may be high but benefit comprehension varies", "Interview buyers, abandoners, users and cancellers"],
@@ -72,7 +72,7 @@
     {
       "id": "travel",
       "name": "Travel protection",
-      "note": "Illustrative comparison — test event observability and frequency",
+      "note": "Illustrative comparison. Test event observability and frequency.",
       "scores": ["Medium", "Medium", "Unknown", "High", "Medium", "High"],
       "interview": {
         "Customer": ["Traveller facing episodic financial and service risk", "Purchase moment can be observable or explicitly declared", "Validate frequency, trust and willingness to pay"],
@@ -82,113 +82,6 @@
         "Operations": ["Time-zone and language coverage", "Offline access to policy and help", "Carrier outage cannot block emergency intake"],
         "Scale": ["Common journey with market-specific eligibility and wording", "Assistance-network reach may bound scale", "Use shared events and reconciliation controls"]
       }
-    }
-  ],
-  "wireframes": [
-    {
-      "id": "entry",
-      "step": "01",
-      "title": "Contextual entry",
-      "screenTitle": "Vehicle protection",
-      "screenCopy": "Your current cover may be due for renewal soon.",
-      "screenMeta": "Check the details before deciding",
-      "action": "See protection",
-      "secondary": "Why am I seeing this?",
-      "customerJob": "Is this relevant to me, and why now?",
-      "decision": "Use a contextual entry only when a legitimate signal exists; otherwise use explicit discovery.",
-      "data": "Declared vehicle context or an approved lifecycle signal. Never manufacture relevance.",
-      "metric": "Incremental qualified product-detail engagement, with core-flow and opt-out guardrails.",
-      "control": "Show the reason for the offer and provide an easy way to dismiss it."
-    },
-    {
-      "id": "profile",
-      "step": "02",
-      "title": "Eligibility + profile",
-      "screenTitle": "A few details",
-      "screenCopy": "We know your name and date of birth. Please confirm what can be reused.",
-      "screenMeta": "Registration • Vehicle type • Start date",
-      "action": "Continue",
-      "secondary": "Why these details?",
-      "customerJob": "Get a quote without answering the same questions twice.",
-      "decision": "Prefill only verified, permitted fields and ask for confirmation where accuracy matters.",
-      "data": "Known by Iute ≠ permitted for this purpose ≠ required by the carrier.",
-      "metric": "Eligibility-to-completed-input rate and correction rate.",
-      "control": "A clear not-eligible path explains the result and any genuine alternative."
-    },
-    {
-      "id": "quote",
-      "step": "03",
-      "title": "Quote + choice",
-      "screenTitle": "Choose your cover",
-      "screenCopy": "Essential\nRequired third-party cover\n\nPlus\nCover + roadside assistance",
-      "screenMeta": "Price shown after carrier quote",
-      "action": "Compare cover",
-      "secondary": "View full documents",
-      "customerJob": "Understand what changes between options.",
-      "decision": "Two useful choices are preferable to a catalogue of marginal variants.",
-      "data": "Quote ID, expiry, product version, limits, excess and carrier response.",
-      "metric": "Quote returned → informed selection; not card clicks.",
-      "control": "Never hide important limits or reframe contractual meaning."
-    },
-    {
-      "id": "coverage",
-      "step": "04",
-      "title": "Coverage comprehension",
-      "screenTitle": "Before you continue",
-      "screenCopy": "Covered\nThird-party liability\n\nImportant limit\nRoadside assistance has usage limits\n\nNot covered\nEvents outside the policy terms",
-      "screenMeta": "Approved wording remains the source of truth",
-      "action": "I understand",
-      "secondary": "Read policy terms",
-      "customerJob": "Know what I am buying before I pay.",
-      "decision": "Put useful cover, material limits and exclusions in the decision path.",
-      "data": "Approved, versioned product documents and local disclosure rules.",
-      "metric": "Comprehension signal, bind rate and post-sale coverage contacts.",
-      "control": "GenAI may simplify approved content but cannot create contractual meaning."
-    },
-    {
-      "id": "bind",
-      "step": "05",
-      "title": "Confirm + bind",
-      "screenTitle": "Confirm your protection",
-      "screenCopy": "Product • price • billing • start date\n\nReview required information and confirm payment.",
-      "screenMeta": "Consent → payment auth → bind → issue",
-      "action": "Confirm and pay",
-      "secondary": "Back to cover",
-      "customerJob": "Know whether I am insured after I pay.",
-      "decision": "Treat payment and policy issuance as separate, observable states.",
-      "data": "Consent record, idempotency key, payment status, bind status, policy ID.",
-      "metric": "Payment-to-policy issuance success and time to confirmed cover.",
-      "control": "If payment succeeds but bind fails, show pending—not active—then retry safely or refund."
-    },
-    {
-      "id": "policy",
-      "step": "06",
-      "title": "Policy home",
-      "screenTitle": "Policy active",
-      "screenCopy": "Motor protection\n\nCover • documents • payment\nRenewal date • change or cancel",
-      "screenMeta": "Policy ID and verification available",
-      "action": "Get help",
-      "secondary": "Make a claim",
-      "customerJob": "Use and verify my cover after purchase.",
-      "decision": "Optimise for ownership, service and renewal—not only checkout.",
-      "data": "Policy version, documents, payment, changes, renewal and claim status.",
-      "metric": "Self-service completion, contact rate, renewal and claim initiation success.",
-      "control": "Provide printable proof when physical documentation still supports trust."
-    },
-    {
-      "id": "claim",
-      "step": "07",
-      "title": "Claim + service",
-      "screenTitle": "Claim in review",
-      "screenCopy": "Submitted ✓\nEvidence checked ✓\nReview in progress\nDecision pending",
-      "screenMeta": "Next update: a committed service date",
-      "action": "View documents",
-      "secondary": "Contact support",
-      "customerJob": "Know what is happening and what I need to do next.",
-      "decision": "A single front door should hide routing complexity without hiding accountability.",
-      "data": "Policy, claim, evidence, routing owner, SLA and status history.",
-      "metric": "Evidence-complete time, contacts per claim, TAT, reopen and complaints.",
-      "control": "Models can structure intake; coverage and claim decisions remain appropriately controlled."
     }
   ],
   "questions": [
@@ -206,7 +99,7 @@
     },
     {
       "topic": "Partners",
-      "question": "Where does Iute want stronger ownership across proposition, administration, servicing and claims—and where is carrier ownership the better choice?"
+      "question": "Where does Iute want stronger ownership across proposition, administration, servicing and claims? Where is carrier ownership the better choice?"
     },
     {
       "topic": "Operating model",
